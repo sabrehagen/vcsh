@@ -750,7 +750,7 @@ VCSH_COMMAND=$(echo "$VCSH_COMMAND" | @SED@ 's/-/_/g'); export VCSH_COMMAND
 # source overlay functions
 for overlay in "$VCSH_OVERLAY_D/$VCSH_COMMAND"* "$VCSH_OVERLAY_D/$VCSH_REPO_NAME.$VCSH_COMMAND"*; do
 	[ -r "$overlay" ] || continue
-	info "sourcing '$overlay'"
+	# info "sourcing '$overlay'"
 	# shellcheck source=/dev/null
 	. "$overlay"
 done
