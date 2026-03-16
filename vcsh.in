@@ -652,7 +652,7 @@ if [ x"$VCSH_COMMAND" = x'clone' ]; then
 	fi
 	[ -z "$VCSH_REPO_NAME" ] && fatal "$VCSH_COMMAND: could not determine repository name" 1
 	export VCSH_REPO_NAME
-	[ -n "$VCSH_BRANCH" ] || VCSH_BRANCH=main
+	[ -n "$VCSH_BRANCH" ] || VCSH_BRANCH=master
 	GIT_DIR=$VCSH_REPO_D/$VCSH_REPO_NAME.git; export GIT_DIR
 elif [ "$VCSH_COMMAND" = 'help' ]; then
 	help && exit
