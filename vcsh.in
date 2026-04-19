@@ -341,7 +341,7 @@ list_has_remote() {
 
 get_files() {
 	GIT_DIR=$VCSH_REPO_D/$VCSH_REPO_NAME.git; export GIT_DIR
-	@GIT@ ls-files --full-name
+	( cd "$VCSH_BASE" && @GIT@ ls-files --full-name )
 }
 
 list_tracked() {
