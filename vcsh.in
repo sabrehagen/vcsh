@@ -532,6 +532,7 @@ use() {
 }
 
 which() {
+	VCSH_COMMAND_PARAMETER=${VCSH_COMMAND_PARAMETER#"$VCSH_BASE"/}
 	# It's ok to modify VCSH_REPO_NAME in a subshell.
 	# shellcheck disable=SC2030
 	output=$(for VCSH_REPO_NAME in $(list); do
